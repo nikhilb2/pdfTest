@@ -1,0 +1,2533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Employee report</title>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+ <script src="https://kit.fontawesome.com/e9f50f9a1c.js" crossorigin="anonymous"></script>
+
+ <style>
+  /* body {
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Roboto', sans-serif;
+   background-color: #f3f3f3;
+   box-sizing: border-box;
+  } */
+
+  /* .document {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+  } */
+
+  /* .page {
+   padding: 60px;
+   padding-bottom: 50px;
+   margin: 0;
+   width: 595px;
+   height: 842px;
+   background-color: #FFF;
+   box-sizing: border-box;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-direction: column;
+   box-sizing: border-box;
+  } */
+
+  /* .page-header {
+   padding: 0;
+   margin: 0;
+   margin-bottom: 2px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   box-sizing: border-box;
+  } */
+
+  /* .page-header-main {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-right: auto;
+  } */
+
+  /* .page-header-main-subtitle {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.5px;
+   font-weight: 500;
+   line-height: 1.18;
+   letter-spacing: 0.09px;
+   color: #707070;
+  } */
+
+  /* .page-header-main-title {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 23px;
+   font-weight: 700;
+   line-height: 1.48;
+   color: #000000;
+  } */
+
+  /* .page-header-img {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   width: 43px;
+   height: 43px;
+   object-fit: contain;
+   border-radius: 50%;
+  } */
+
+  /* .page-info {
+   padding: 0;
+   margin: 0;
+   margin-bottom: 19px;
+   box-sizing: border-box;
+  } */
+
+  /* .page-info-item {
+   padding: 0;
+   margin: 0;
+   margin-right: 18px;
+   box-sizing: border-box;
+   display: inline-block;
+   font-size: 7.5px;
+   font-weight: 500;
+   line-height: 1.33;
+   letter-spacing: 0.08px;
+   color: #585858;
+  } */
+
+  /* .page-info-item span {
+   font-weight: 400;
+  } */
+
+  /* .page-body {
+   padding: 0;
+   margin: 0;
+   margin-bottom: auto;
+  } */
+
+  /* .page-body-header {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   padding-left: 9px;
+   padding-right: 9px;
+   margin-bottom: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 23px;
+   border-radius: 1.8px;
+   background-color: #f4f6f7;
+  } */
+
+  /* .page-body-header-text {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 500;
+   line-height: 1.29;
+   letter-spacing: 0.04px;
+   color: #44434b;
+  } */
+
+  /* .page-body-header-dropdown {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   letter-spacing: 0.04px;
+   color: #505d6c;
+  } */
+
+  /* .feedback {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   flex-wrap: wrap;
+  } */
+
+  /* .feedback-card {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 16px;
+   width: 230px;
+  border-radius: 2.5px;
+  box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+  border: solid 0.8px #eaeaea;
+  background-color: #ffffff;
+  }
+  */
+
+  /* .feedback-card-header {
+   padding: 0;
+   margin: 0;
+   padding: 5px 10px;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   border-bottom: .75px solid #EAEAEA;
+  } */
+
+  /* .feedback-card-header-img {
+   padding: 0;
+   margin: 0;
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 27px;
+   height: 27px;
+   object-fit: contain;
+   border-radius: 50%;
+  } */
+
+  /* .feedback-card-header-name {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.8px;
+   font-weight: 500;
+   line-height: 1.26;
+   letter-spacing: -0.1px;
+   color: #292929;
+  } */
+
+  /* .feedback-card-header-date {
+   padding: 0;
+   margin: 0;
+   margin-left: auto;
+   margin-right: 4px;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   color: #5d5d5d;
+  } */
+
+  /* .feedback-card-rating {
+   padding: 0;
+   margin: 10px;
+   margin-top: 8.5px;
+   margin-bottom: 0;
+   padding-bottom: 3.8px;
+   box-sizing: border-box;
+   border-bottom: .75px solid #EAEAEA;
+  } */
+
+  /* .feedback-card-rating-item {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 5px;
+   display: flex;
+   align-items: center;
+  } */
+
+  /* .feedback-card-rating-item-title {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-right: 14px;
+   width: 48px;
+   font-size: 7.3px;
+   font-weight: 500;
+   line-height: 1.36;
+   letter-spacing: 0.07px;
+   color: #383838;
+  } */
+
+  /* .feedback-card-rating-item-stars {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+  } */
+
+  /* .feedback-card-rating-item-stars svg {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-right: 1.8px;
+   display: inline-block;
+   font-size: 9px;
+   color: #FFD800;
+  } */
+
+  /* .feedback-card-body {
+   padding: 8.5px 33px 11px 10px;
+   margin: 0;
+   box-sizing: border-box;
+  } */
+
+  /* .feedback-card-body-text {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+  } */
+
+  /* .feedback-card-body-text .type {
+   font-weight: 500;
+  } */
+
+  /* .feedback-card-body-text.compliment {
+   margin-bottom: 5px;
+  } */
+
+  /* .page-footer {
+   position: relative;
+   padding: 0;
+   margin: 0;
+   width: 100%;
+   padding-top: 9.7px;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-top: .75px solid #EAEAEA;
+  } */
+
+  /* .page-footer-info {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.43;
+   letter-spacing: 0.04px;
+   color: #4e4e4e;
+  } */
+
+  /* .page-footer-info span {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-weight: 700;
+  } */
+
+  /* .page-footer-company {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translate(-50%, 0);
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 700;
+   line-height: 1.43;
+   letter-spacing: 0.09px;
+   color: #4e4e4e;
+  } */
+
+  /* .page-footer-date {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.43;
+   letter-spacing: 0.04px;
+   color: #4e4e4e;
+  } */
+ </style>
+</head>
+
+<body style="
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+">
+
+ <div class="document" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ ">
+  <div class="page" style="
+   padding: 60px;
+   padding-bottom: 50px;
+   margin: 0;
+   width: 595px;
+   height: 842px;
+   background-color: #FFF;
+   box-sizing: border-box;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-direction: column;
+   box-sizing: border-box;
+  ">
+   <div class="page-header" style="
+     padding: 0;
+     margin: 0;
+     margin-bottom: 2px;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     box-sizing: border-box;
+   ">
+    <div class="page-header-main" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      margin-right: auto;
+    ">
+     <p class="page-header-main-subtitle" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 8.5px;
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: 0.09px;
+      color: #707070;
+     ">Employee Report</p>
+     <p class="page-header-main-title" style="
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+       font-size: 23px;
+       font-weight: 700;
+       line-height: 1.48;
+       color: #000000;
+     ">Peter Smith</p>
+    </div>
+    <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="page-header-img" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      width: 43px;
+      height: 43px;
+      object-fit: contain;
+      border-radius: 50%;
+    ">
+   </div>
+   <div class="page-info" style="
+     padding: 0;
+     margin: 0;
+     margin-bottom: 19px;
+     box-sizing: border-box;
+   ">
+    <p class="page-info-item" style="
+      padding: 0;
+      margin: 0;
+      margin-right: 18px;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 7.5px;
+      font-weight: 500;
+      line-height: 1.33;
+      letter-spacing: 0.08px;
+      color: #585858;
+    ">Job title: <span style="font-weight: 400;">Javascript developer</span></p>
+    <p class="page-info-item" style="
+      padding: 0;
+      margin: 0;
+      margin-right: 18px;
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: 7.5px;
+      font-weight: 500;
+      line-height: 1.33;
+      letter-spacing: 0.08px;
+      color: #585858;
+    ">Job title: <span style="font-weight: 400;">Frontend developers</span></p>
+   </div>
+   <div class="page-body" style="
+     padding: 0;
+     margin: 0;
+     margin-bottom: auto;
+     width: 100%;
+   ">
+    <div class="page-body-header" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      padding-left: 9px;
+      padding-right: 9px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 23px;
+      border-radius: 1.8px;
+      background-color: #f4f6f7;
+    ">
+     <p class="page-body-header-text" style="
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+       font-size: 7px;
+       font-weight: 500;
+       line-height: 1.29;
+       letter-spacing: 0.04px;
+       color: #44434b;
+     ">Average received feedback by users</p>
+     <p class="page-body-header-dropdown" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 7px;
+      font-weight: 400;
+      line-height: 1.29;
+      letter-spacing: 0.04px;
+      color: #505d6c;
+     ">6 per page <i class="fas fa-caret-down"></i></p>
+    </div>
+    <div class="feedback" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    ">
+
+     <div class="feedback-card" style="
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+margin-bottom: 16px;
+width: 230px;
+/* height: 169px; */
+border-radius: 2.5px;
+box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+border: solid 0.8px #eaeaea;
+background-color: #ffffff;
+">
+      <div class="feedback-card-header" style="
+  padding: 0;
+  margin: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: .75px solid #EAEAEA;
+">
+       <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="feedback-card-header-img" style="
+   padding: 0;
+   margin: 0;
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 27px;
+   height: 27px;
+   object-fit: contain;
+   border-radius: 50%;
+ ">
+       <p class="feedback-card-header-name" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.8px;
+   font-weight: 500;
+   line-height: 1.26;
+   letter-spacing: -0.1px;
+   color: #292929;
+ ">Eve Larsson</p>
+       <p class="feedback-card-header-date" style="
+   padding: 0;
+   margin: 0;
+   margin-left: auto;
+   margin-right: 4px;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   color: #5d5d5d;
+ ">7 feedbacks</p>
+      </div>
+
+      <div class="feedback-card-rating" style="
+ padding: 0;
+ margin: 10px;
+ margin-top: 8.5px;
+ margin-bottom: 0;
+ padding-bottom: 3.8px;
+ box-sizing: border-box;
+ border-bottom: .75px solid #EAEAEA;
+">
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Attitude:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+      </div>
+
+      <div class="feedback-card-body" style="
+ padding: 8.5px 33px 11px 10px;
+ margin: 0;
+ box-sizing: border-box;
+">
+       <p class="feedback-card-body-text compliment" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 5px;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Compliments: </span>
+        <span class="message">
+         Amazing presentation, Good translations,
+         You are a great colleague, A pleasure working with you
+        </span>
+       </p>
+
+       <p class="feedback-card-body-text improver" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Improvers: </span>
+        <span class="message">
+         Please clearer instructions for me, Don’t be
+         so angry all the time, Please start coming earlier to work
+        </span>
+       </p>
+      </div>
+     </div>
+
+     <div class="feedback-card" style="
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+margin-bottom: 16px;
+width: 230px;
+/* height: 169px; */
+border-radius: 2.5px;
+box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+border: solid 0.8px #eaeaea;
+background-color: #ffffff;
+">
+      <div class="feedback-card-header" style="
+  padding: 0;
+  margin: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: .75px solid #EAEAEA;
+">
+       <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="feedback-card-header-img" style="
+   padding: 0;
+   margin: 0;
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 27px;
+   height: 27px;
+   object-fit: contain;
+   border-radius: 50%;
+ ">
+       <p class="feedback-card-header-name" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.8px;
+   font-weight: 500;
+   line-height: 1.26;
+   letter-spacing: -0.1px;
+   color: #292929;
+ ">Eve Larsson</p>
+       <p class="feedback-card-header-date" style="
+   padding: 0;
+   margin: 0;
+   margin-left: auto;
+   margin-right: 4px;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   color: #5d5d5d;
+ ">7 feedbacks</p>
+      </div>
+
+      <div class="feedback-card-rating" style="
+ padding: 0;
+ margin: 10px;
+ margin-top: 8.5px;
+ margin-bottom: 0;
+ padding-bottom: 3.8px;
+ box-sizing: border-box;
+ border-bottom: .75px solid #EAEAEA;
+">
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Attitude:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+      </div>
+
+      <div class="feedback-card-body" style="
+ padding: 8.5px 33px 11px 10px;
+ margin: 0;
+ box-sizing: border-box;
+">
+       <p class="feedback-card-body-text compliment" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 5px;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Compliments: </span>
+        <span class="message">
+         Amazing presentation, Good translations,
+         You are a great colleague, A pleasure working with you
+        </span>
+       </p>
+
+       <p class="feedback-card-body-text improver" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Improvers: </span>
+        <span class="message">
+         Please clearer instructions for me, Don’t be
+         so angry all the time, Please start coming earlier to work
+        </span>
+       </p>
+      </div>
+     </div>
+
+     <div class="feedback-card" style="
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+margin-bottom: 16px;
+width: 230px;
+/* height: 169px; */
+border-radius: 2.5px;
+box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+border: solid 0.8px #eaeaea;
+background-color: #ffffff;
+">
+      <div class="feedback-card-header" style="
+  padding: 0;
+  margin: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: .75px solid #EAEAEA;
+">
+       <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="feedback-card-header-img" style="
+   padding: 0;
+   margin: 0;
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 27px;
+   height: 27px;
+   object-fit: contain;
+   border-radius: 50%;
+ ">
+       <p class="feedback-card-header-name" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.8px;
+   font-weight: 500;
+   line-height: 1.26;
+   letter-spacing: -0.1px;
+   color: #292929;
+ ">Eve Larsson</p>
+       <p class="feedback-card-header-date" style="
+   padding: 0;
+   margin: 0;
+   margin-left: auto;
+   margin-right: 4px;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   color: #5d5d5d;
+ ">7 feedbacks</p>
+      </div>
+
+      <div class="feedback-card-rating" style="
+ padding: 0;
+ margin: 10px;
+ margin-top: 8.5px;
+ margin-bottom: 0;
+ padding-bottom: 3.8px;
+ box-sizing: border-box;
+ border-bottom: .75px solid #EAEAEA;
+">
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Attitude:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+      </div>
+
+      <div class="feedback-card-body" style="
+ padding: 8.5px 33px 11px 10px;
+ margin: 0;
+ box-sizing: border-box;
+">
+       <p class="feedback-card-body-text compliment" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 5px;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Compliments: </span>
+        <span class="message">
+         Amazing presentation, Good translations,
+         You are a great colleague, A pleasure working with you
+        </span>
+       </p>
+
+       <p class="feedback-card-body-text improver" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Improvers: </span>
+        <span class="message">
+         Please clearer instructions for me, Don’t be
+         so angry all the time, Please start coming earlier to work
+        </span>
+       </p>
+      </div>
+     </div>
+
+     <div class="feedback-card" style="
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+margin-bottom: 16px;
+width: 230px;
+/* height: 169px; */
+border-radius: 2.5px;
+box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+border: solid 0.8px #eaeaea;
+background-color: #ffffff;
+">
+      <div class="feedback-card-header" style="
+  padding: 0;
+  margin: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: .75px solid #EAEAEA;
+">
+       <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="feedback-card-header-img" style="
+   padding: 0;
+   margin: 0;
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 27px;
+   height: 27px;
+   object-fit: contain;
+   border-radius: 50%;
+ ">
+       <p class="feedback-card-header-name" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.8px;
+   font-weight: 500;
+   line-height: 1.26;
+   letter-spacing: -0.1px;
+   color: #292929;
+ ">Eve Larsson</p>
+       <p class="feedback-card-header-date" style="
+   padding: 0;
+   margin: 0;
+   margin-left: auto;
+   margin-right: 4px;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   color: #5d5d5d;
+ ">7 feedbacks</p>
+      </div>
+
+      <div class="feedback-card-rating" style="
+ padding: 0;
+ margin: 10px;
+ margin-top: 8.5px;
+ margin-bottom: 0;
+ padding-bottom: 3.8px;
+ box-sizing: border-box;
+ border-bottom: .75px solid #EAEAEA;
+">
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Attitude:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+      </div>
+
+      <div class="feedback-card-body" style="
+ padding: 8.5px 33px 11px 10px;
+ margin: 0;
+ box-sizing: border-box;
+">
+       <p class="feedback-card-body-text compliment" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 5px;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Compliments: </span>
+        <span class="message">
+         Amazing presentation, Good translations,
+         You are a great colleague, A pleasure working with you
+        </span>
+       </p>
+
+       <p class="feedback-card-body-text improver" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Improvers: </span>
+        <span class="message">
+         Please clearer instructions for me, Don’t be
+         so angry all the time, Please start coming earlier to work
+        </span>
+       </p>
+      </div>
+     </div>
+
+     <div class="feedback-card" style="
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+margin-bottom: 16px;
+width: 230px;
+/* height: 169px; */
+border-radius: 2.5px;
+box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+border: solid 0.8px #eaeaea;
+background-color: #ffffff;
+">
+      <div class="feedback-card-header" style="
+  padding: 0;
+  margin: 0;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: .75px solid #EAEAEA;
+">
+       <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="feedback-card-header-img" style="
+   padding: 0;
+   margin: 0;
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 27px;
+   height: 27px;
+   object-fit: contain;
+   border-radius: 50%;
+ ">
+       <p class="feedback-card-header-name" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 8.8px;
+   font-weight: 500;
+   line-height: 1.26;
+   letter-spacing: -0.1px;
+   color: #292929;
+ ">Eve Larsson</p>
+       <p class="feedback-card-header-date" style="
+   padding: 0;
+   margin: 0;
+   margin-left: auto;
+   margin-right: 4px;
+   box-sizing: border-box;
+   font-size: 7px;
+   font-weight: 400;
+   line-height: 1.29;
+   color: #5d5d5d;
+ ">7 feedbacks</p>
+      </div>
+
+      <div class="feedback-card-rating" style="
+ padding: 0;
+ margin: 10px;
+ margin-top: 8.5px;
+ margin-bottom: 0;
+ padding-bottom: 3.8px;
+ box-sizing: border-box;
+ border-bottom: .75px solid #EAEAEA;
+">
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Attitude:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+         <i class="fas fa-star full" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     margin-right: 1.8px;
+     color: #FFD800;
+     display: inline-block;
+     font-size: 9px;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+ ">
+        <p class="feedback-card-rating-item-title" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 14px;
+    width: 48px;
+    font-size: 7.3px;
+    font-weight: 500;
+    line-height: 1.36;
+    letter-spacing: 0.07px;
+    color: #383838;
+  ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  ">
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+         <i class="fas fa-star full" style="
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-right: 1.8px;
+    display: inline-block;
+    font-size: 9px;
+    color: #FFD800;
+   "></i>
+        </div>
+       </div>
+      </div>
+
+      <div class="feedback-card-body" style="
+ padding: 8.5px 33px 11px 10px;
+ margin: 0;
+ box-sizing: border-box;
+">
+       <p class="feedback-card-body-text compliment" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   margin-bottom: 5px;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Compliments: </span>
+        <span class="message">
+         Amazing presentation, Good translations,
+         You are a great colleague, A pleasure working with you
+        </span>
+       </p>
+
+       <p class="feedback-card-body-text improver" style="
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 7.3px;
+   font-weight: 400;
+   line-height: 1.77;
+   letter-spacing: 0.07px;
+   color: #383838;
+   display: block;
+   display: -webkit-box;
+   text-overflow: ellipsis;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+ ">
+        <span class="type" style="font-weight: 500;">Improvers: </span>
+        <span class="message">
+         Please clearer instructions for me, Don’t be
+         so angry all the time, Please start coming earlier to work
+        </span>
+       </p>
+      </div>
+     </div>
+
+     <div class="feedback-card" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      margin-bottom: 16px;
+      width: 230px;
+      /* height: 169px; */
+      border-radius: 2.5px;
+      box-shadow: 0 3px 6px 0 rgba(226, 226, 226, 0.11);
+      border: solid 0.8px #eaeaea;
+      background-color: #ffffff;
+     ">
+      <div class="feedback-card-header" style="
+        padding: 0;
+        margin: 0;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        border-bottom: .75px solid #EAEAEA;
+      ">
+       <img src="https://dashboard.teamfeedback.app/assets/img/logo-png.png" alt="User's profile picture" class="feedback-card-header-img" style="
+         padding: 0;
+         margin: 0;
+         margin-right: 8px;
+         box-sizing: border-box;
+         width: 27px;
+         height: 27px;
+         object-fit: contain;
+         border-radius: 50%;
+       ">
+       <p class="feedback-card-header-name" style="
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+         font-size: 8.8px;
+         font-weight: 500;
+         line-height: 1.26;
+         letter-spacing: -0.1px;
+         color: #292929;
+       ">Eve Larsson</p>
+       <p class="feedback-card-header-date" style="
+         padding: 0;
+         margin: 0;
+         margin-left: auto;
+         margin-right: 4px;
+         box-sizing: border-box;
+         font-size: 7px;
+         font-weight: 400;
+         line-height: 1.29;
+         color: #5d5d5d;
+       ">7 feedbacks</p>
+      </div>
+
+      <div class="feedback-card-rating" style="
+       padding: 0;
+       margin: 10px;
+       margin-top: 8.5px;
+       margin-bottom: 0;
+       padding-bottom: 3.8px;
+       box-sizing: border-box;
+       border-bottom: .75px solid #EAEAEA;
+      ">
+       <div class="feedback-card-rating-item" style="
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+       ">
+        <p class="feedback-card-rating-item-title" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 14px;
+          width: 48px;
+          font-size: 7.3px;
+          font-weight: 500;
+          line-height: 1.36;
+          letter-spacing: 0.07px;
+          color: #383838;
+        ">Attitude:</p>
+        <div class="feedback-card-rating-item-stars" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        ">
+         <i class="fas fa-star full" style="
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           margin-right: 1.8px;
+           color: #FFD800;
+           display: inline-block;
+           font-size: 9px;
+         "></i>
+         <i class="fas fa-star full" style="
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           margin-right: 1.8px;
+           color: #FFD800;
+           display: inline-block;
+           font-size: 9px;
+         "></i>
+         <i class="fas fa-star full" style="
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           margin-right: 1.8px;
+           color: #FFD800;
+           display: inline-block;
+           font-size: 9px;
+         "></i>
+         <i class="fas fa-star full" style="
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           margin-right: 1.8px;
+           color: #FFD800;
+           display: inline-block;
+           font-size: 9px;
+         "></i>
+         <i class="fas fa-star full" style="
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           margin-right: 1.8px;
+           color: #FFD800;
+           display: inline-block;
+           font-size: 9px;
+         "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+       ">
+        <p class="feedback-card-rating-item-title" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 14px;
+          width: 48px;
+          font-size: 7.3px;
+          font-weight: 500;
+          line-height: 1.36;
+          letter-spacing: 0.07px;
+          color: #383838;
+        ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        ">
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+        </div>
+       </div>
+
+       <div class="feedback-card-rating-item" style="
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+       ">
+        <p class="feedback-card-rating-item-title" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 14px;
+          width: 48px;
+          font-size: 7.3px;
+          font-weight: 500;
+          line-height: 1.36;
+          letter-spacing: 0.07px;
+          color: #383838;
+        ">Productivity:</p>
+        <div class="feedback-card-rating-item-stars" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+        ">
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+         <i class="fas fa-star full" style="
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          margin-right: 1.8px;
+          display: inline-block;
+          font-size: 9px;
+          color: #FFD800;
+         "></i>
+        </div>
+       </div>
+      </div>
+
+      <div class="feedback-card-body" style="
+       padding: 8.5px 33px 11px 10px;
+       margin: 0;
+       box-sizing: border-box;
+      ">
+       <p class="feedback-card-body-text compliment" style="
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+         margin-bottom: 5px;
+         font-size: 7.3px;
+         font-weight: 400;
+         line-height: 1.77;
+         letter-spacing: 0.07px;
+         color: #383838;
+         display: block;
+         display: -webkit-box;
+         text-overflow: ellipsis;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+       ">
+        <span class="type" style="font-weight: 500;">Compliments: </span>
+        <span class="message">
+         Amazing presentation, Good translations,
+         You are a great colleague, A pleasure working with you
+        </span>
+       </p>
+
+       <p class="feedback-card-body-text improver" style="
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+         font-size: 7.3px;
+         font-weight: 400;
+         line-height: 1.77;
+         letter-spacing: 0.07px;
+         color: #383838;
+         display: block;
+         display: -webkit-box;
+         text-overflow: ellipsis;
+         -webkit-line-clamp: 2;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+       ">
+        <span class="type" style="font-weight: 500;">Improvers: </span>
+        <span class="message">
+         Please clearer instructions for me, Don’t be
+         so angry all the time, Please start coming earlier to work
+        </span>
+       </p>
+      </div>
+     </div>
+
+    </div>
+   </div>
+
+   <div class="page-footer" style="
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    padding-top: 9.7px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: .75px solid #EAEAEA;
+   ">
+    <p class="page-footer-info" style="
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-size: 7px;
+     font-weight: 400;
+     line-height: 1.43;
+     letter-spacing: 0.04px;
+     color: #4e4e4e;
+    "><span style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-weight: 700;
+    ">Peter Smith</span> - Javascript Developer</p>
+    <p class="page-footer-company" style="
+       position: absolute;
+       bottom: 0;
+       left: 50%;
+       transform: translate(-50%, 0);
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+       font-size: 7px;
+       font-weight: 700;
+       line-height: 1.43;
+       letter-spacing: 0.09px;
+       color: #4e4e4e;
+    ">Example Company</p>
+    <p class="page-footer-date" style="
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 7px;
+      font-weight: 400;
+      line-height: 1.43;
+      letter-spacing: 0.04px;
+      color: #4e4e4e;
+    ">15.8.2020</p>
+   </div>
+  </div>
+ </div>
+
+</body>
+
+</html>
